@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-namespace CrudNetAngular.Core.Repositories.UoW
+namespace CrudNetAngular.Core.Interfaces.Repositories.UoW
 {
     /// <summary>
     /// Unit of work of repositories.

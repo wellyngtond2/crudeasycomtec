@@ -4,13 +4,13 @@ using CrudNetAngular.Data.Context;
 
 namespace CrudNetAngular.Data.Repositories
 {
-    public sealed class TalentBaseRepository : BaseRepository<TalentBase>, ITalentBaseRepository
+    public sealed class TalentBaseXOccupationRepository : BaseRepository<TalentBaseXOccupation>, ITalentBaseXOccupationRepository
     {
         /// <summary>
         /// Instance of dbcontext
         /// </summary>
         private DataContext _dataContext { get; }
-        public TalentBaseRepository(DataContext dbContext) : base(dbContext)
+        public TalentBaseXOccupationRepository(DataContext dbContext) : base(dbContext)
         {
             _dataContext = dbContext;
         }

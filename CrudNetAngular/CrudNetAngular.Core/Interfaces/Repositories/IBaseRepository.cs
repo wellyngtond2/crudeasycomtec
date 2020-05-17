@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CrudNetAngular.Core.Repositories
+namespace CrudNetAngular.Core.Interfaces.Repositories
 {
     /// <summary>
     /// Base of repositories
@@ -34,6 +34,6 @@ namespace CrudNetAngular.Core.Repositories
         /// <summary>
         /// Retrieve  a list of  all entity.
         /// </summary>
-        Task<ICollection<TEntity>> GetByAll();
+        Task<IEnumerable<TEntity>> GetByAll();
     }
 }
