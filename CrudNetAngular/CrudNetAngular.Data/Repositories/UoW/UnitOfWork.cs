@@ -26,12 +26,12 @@ namespace CrudNetAngular.Data.Repositories.UoW
 
         public void BeginTransaction()
         {
-            _dataContext.Database.BeginTransaction();
+            _dataContext.Database.BeginTransactionAsync();
         }
 
         public void CommitTransaction()
         {
-            _dataContext.SaveChanges();
+            _dataContext.SaveChangesAsync();
             _dataContext.Database.CommitTransaction();
         }
 

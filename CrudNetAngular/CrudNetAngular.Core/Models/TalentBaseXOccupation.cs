@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CrudNetAngular.Core.Models
 {
@@ -12,8 +13,16 @@ namespace CrudNetAngular.Core.Models
         /// </summary>
         public TalentBase TalentBase { get; set; }
         /// <summary>
+        /// TalentBase identify
+        /// </summary>
+        public Guid TalentBaseId { get; set; }
+        /// <summary>
         /// Occupation.
         /// </summary>
         public Occupation Occupation { get; set; }
+        /// <summary>
+        /// Occupation identify
+        /// </summary>
+        public Guid OccupationId { get; set; }
     }
 }

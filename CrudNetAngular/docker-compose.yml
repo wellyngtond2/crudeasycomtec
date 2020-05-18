@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    ports:
+      - 80:80
+      - 443:443
+    image: jwilder/nginx-proxy
+    networks:
+      - reverse-proxy
+    volumes:
+      - $HOME/certs:/etc/nginx/certs:ro
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  nginx-letsencrypt:
+    container_name: nginx-letsencrypt
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    depends_on:
+      - nginx-proxy
+    networks:
+      - reverse-proxy
+    volumes_from:
+      - nginx-proxy
+    volumes:
+      - $HOME/certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  crudnetangular:
+    image: wellyngtond2/easycomtec
+    depends_on:
+      - nginx-letsencrypt
+    restart: always
+    volumes:
+      - $HOME/logs:/logs
+    networks:
+      - reverse-proxy
+      - back
+    build:
+      context: .
+      dockerfile: CrudNetAngular/Dockerfile
+
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
+  back:
+    driver: bridge

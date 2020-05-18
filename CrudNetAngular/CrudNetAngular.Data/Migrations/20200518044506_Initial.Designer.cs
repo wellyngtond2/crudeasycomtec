@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrudNetAngular.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200517061907_Initial")]
+    [Migration("20200518044506_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,275 +71,270 @@ namespace CrudNetAngular.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("TalentBaseId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TalentBaseId");
 
                     b.ToTable("Knowledge");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("59fd53f5-cf8b-41e1-98a4-93c72d69d4f6"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("68cb2a70-a724-476c-84df-efb1de9f3a9a"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 213, DateTimeKind.Local).AddTicks(3980),
                             Description = "Ionic",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("343c833b-2404-421d-ba0d-55b2f70f8d05"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("febb2742-2a1e-452a-ab4e-76940fd3c4eb"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(5819),
                             Description = "ReactJS",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("f1fc5a53-d0e1-4009-983c-a5b927c8f5d3"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("942e7cd0-d0c3-4f73-b346-f1d272037975"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(5858),
                             Description = "React Native",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("e1a44ae5-3369-44ba-a82e-2782f1624f90"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("4fd0203a-f6f0-4686-9f2b-0c7cb68ac410"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(5862),
                             Description = "Android",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("d4a605b2-064a-4adf-b6fd-45e614da4634"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("63dbd2d7-6450-40ab-9d03-416058ee4936"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6061),
                             Description = "Flutter",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("c3ac363a-edd0-4d9b-b0b7-26ac1d54a85d"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("74f97f1c-4f06-4940-becb-de4351de2bd7"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6069),
                             Description = "SWIFT",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("a8536425-20fa-4fdf-b09b-99f09ee8e6d2"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("2efad335-9f6c-43af-90bd-0c8963cb3e3e"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6071),
                             Description = "IOS",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("eca986d8-158f-4271-9178-210911e2bb8c"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("9f447cd2-f2a6-4687-ad03-9731ab96c30f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6073),
                             Description = "HTML",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("506ed717-64b0-498a-bb61-141840088c68"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("1db3f042-1314-4d11-8268-3853015d9489"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6084),
                             Description = "CSS",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("c158d043-0890-479c-927a-ee55d3da777f"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("7b30cc40-461f-4877-965b-aa1f5e5884de"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6089),
                             Description = "Bootstrap",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("3bbbbe44-cae7-489e-8822-4d5703038848"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("a8993606-005d-4c2b-8124-aeb686299898"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6091),
                             Description = "Jquery",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("d879b3b9-335b-4eea-a76a-13ddcb127107"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("a4ccaaf6-9155-4289-9595-16e9f4d7a70d"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6093),
                             Description = "AngularJs 1.*",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("ce3af568-d43b-4a46-b8a9-dbb24c607e5e"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("9e944f3b-0de4-4466-abde-24871c5a67dd"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6096),
                             Description = "Angular",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("9dea63cb-f785-4290-9981-1b7071d2fa53"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("f2d2f3bb-a5b4-40fd-aeb3-a57a6906a619"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6098),
                             Description = "Java",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("7969bdb0-ea54-4b44-ac7c-fa7ed482617e"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("8365fce6-7dfd-4cdd-98ac-fbcafd888593"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6100),
                             Description = "Python",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("0c07bdc7-01e2-45a5-92ce-2fa324bf078f"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("3942580a-6bdf-4038-9e56-e6ff86cdb034"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6102),
                             Description = "Flask",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("bee36e42-2dc3-4794-95d0-ac0d41e37407"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("f9b0f5d4-fef5-4b5d-8cb4-2461deeb7784"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6107),
                             Description = "Asp.Net MVC",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("68ed6c58-903f-4c69-956c-6416645ca7ce"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("bec3c23d-5e03-4537-8649-0beec51c640a"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6111),
                             Description = "Asp.Net WebForm",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("0fbb7eb2-e258-4115-81c4-e3ae13c1a9e4"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("6f547101-64c2-44c6-a5ea-ca79f5d524d0"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6113),
                             Description = "C",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("9ea3abbb-f510-443d-8fbd-d96b08a1523c"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("6a69721d-0013-45ab-a5d6-d058e9d52798"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6116),
                             Description = "C#",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("97622c9b-76f3-40a3-a79a-749e6836bfbc"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("9da390c4-0a5d-4e76-8272-e159b807d462"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6118),
                             Description = "NodeJS",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("d13eb001-de7b-4d81-8b65-91f822396f77"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("d8cfa9b0-5b32-4b15-9de2-55ba4e2a267f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6120),
                             Description = "Express - NodeJs",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("c761d70c-7d31-4425-9ac5-3dbaf64749bb"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("25e438ae-6d5e-43d7-b279-6e81462ff527"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6123),
                             Description = "Cake",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("88a68261-a77c-4d68-9da5-5533114dd6f9"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("fffcbc26-c2a4-42f2-82f5-fb1679b6bc6f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6125),
                             Description = "Django",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("36782414-7a19-45c2-8452-2a3b0d9f8de1"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("da4259eb-0b8e-41ca-8b75-cc84086c4a24"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6130),
                             Description = "Majento",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("6a342b4f-472a-4ac8-931a-056af377ecc1"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("14e4fc35-42e2-4edc-a8cb-3faf20ae74f4"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6132),
                             Description = "PHP",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("402b6e5b-e9bc-42b4-b860-db1bf94a42f5"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("bf76668a-03c7-486a-9c76-1a6365a4497f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6135),
                             Description = "Vue",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("aa78b972-e59c-4eab-80a3-b9b302137d68"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("76eab6b1-1aec-4f83-bb35-26d155521443"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6137),
                             Description = "Wordpress",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("e27c1901-9b48-4a6c-b15e-796d132856f5"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("e6acee4d-79a6-4f96-aa4c-5c19bb764f5e"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6140),
                             Description = "Phyton",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("b39f8e24-94f0-4f23-a88f-7f37bfada167"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("7d4c46ad-463c-472c-9144-dc7fd7536421"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6142),
                             Description = "Ruby",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("7f84ce9a-8b8e-4ce5-8585-8b2b86b5e227"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("f32731e6-c9f6-4c62-8a7a-6e38dae852af"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6144),
                             Description = "My SQL Server",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("c033c37e-2be8-4960-8054-6707d2fa6a9f"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("2e997a11-00cf-4e58-b7e6-304465382c1d"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6146),
                             Description = "My SQL",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("8468382f-d5cf-4ced-9780-6daa5f984331"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("a3260526-80bd-4e66-bfb2-15d8e559e663"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6151),
                             Description = "Salesforce",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("f31c0aa9-0120-4b27-9123-4e64c8311dfe"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("db1b1b86-18d8-43d6-8068-9900d0a49158"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6164),
                             Description = "Photoshop",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("523a8761-53ca-4c6b-8ab3-66e34ce4e4ba"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("a81f204b-52d9-4e3d-b1f4-26dd50db334f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6166),
                             Description = "Illustrator",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("a0b28378-7368-4a78-94a2-7abc0673d8ca"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("25e5d096-6949-4d36-a0f6-20d7b340d65c"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6169),
                             Description = "SEO",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("22b7e26a-08de-486d-8c20-f1b1ddbef036"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("06d7fd7c-6f4c-44ae-ab8a-4f9f43fa7a17"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 214, DateTimeKind.Local).AddTicks(6171),
                             Description = "Laravel",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -357,86 +352,81 @@ namespace CrudNetAngular.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("TalentBaseId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TalentBaseId");
 
                     b.ToTable("Occupation");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d9a2aaa3-bf7e-48aa-b5a7-1fe2f8ab935d"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("7394617b-ec6b-43b5-8563-a3bf74c1f310"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8215),
                             Description = "Up to 4 hours per day / Até 4 horas por dia",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("37fef117-8342-4d14-bb6e-ea16b5aa9742"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("6ab1820a-eb38-47c9-97b9-8568ac0dca43"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8296),
                             Description = "4 to 6 hours per day / De 4 á 6 horas por dia",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("7902ba7e-9d77-4d93-ada2-7dac773c0188"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("fe7caee7-3d22-4ef0-bbbd-87dfdf9c4a07"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8299),
                             Description = "6 to 8 hours per day /De 6 á 8 horas por dia",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("927f5b33-30cb-4b88-a846-8c5cba695dea"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("454a718f-0455-4f1a-baec-2d05f3079d5f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8310),
                             Description = "Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("8f45d02d-b492-4a03-a362-8e8660b47c7d"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("d70cd70c-5645-4387-be36-6332ffbe2ab7"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8313),
                             Description = "Only weekends / Apenas finais de semana",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("b83b03d2-0dca-4304-bd92-524eca1fe488"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("4ff59221-2b8e-4bfd-ad45-742246eb6453"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8319),
                             Description = "Morning (from 08:00 to 12:00) / Manhã (de 08:00 ás 12:00)",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("d3b40083-46f9-48f8-a5ef-4b861fa65913"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("cc769a13-e07f-4324-9ed9-7cf109b96c97"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8321),
                             Description = "Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("182738ed-08d7-47b7-bb0e-bfc794c99ea1"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("08ec925b-d649-4b45-9022-4bc7c1f2a6ad"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8324),
                             Description = "Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("a74229ef-22d7-49bb-be1a-2a88b13fd6e8"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("1b97452d-8c75-43eb-9836-09cb63a2cd24"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8326),
                             Description = "Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("6dfb4900-fdbd-4fb3-bc7f-f3b8d9e12dbe"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("8c105615-9743-4f31-9fae-9221ced4a02f"),
+                            CreatedAt = new DateTime(2020, 5, 18, 1, 45, 6, 216, DateTimeKind.Local).AddTicks(8330),
                             Description = "Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -458,7 +448,7 @@ namespace CrudNetAngular.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("HourPrice")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(7,2)");
 
                     b.Property<string>("KnowledgePlus")
                         .HasColumnType("nvarchar(max)");
@@ -475,73 +465,47 @@ namespace CrudNetAngular.Data.Migrations
 
             modelBuilder.Entity("CrudNetAngular.Core.Models.TalentBaseXKnowledge", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<Guid>("TalentBaseId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("KnowledgeId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("KnowledgeId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("Level")
                         .HasColumnType("int");
-
-                    b.Property<Guid?>("TalentBaseId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("TalentBaseId", "KnowledgeId");
 
                     b.HasIndex("KnowledgeId");
-
-                    b.HasIndex("TalentBaseId");
 
                     b.ToTable("TalentBaseXKnowledge");
                 });
 
             modelBuilder.Entity("CrudNetAngular.Core.Models.TalentBaseXOccupation", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<Guid>("TalentBaseId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("OccupationId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("OccupationId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("TalentBaseId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("TalentBaseId", "OccupationId");
 
                     b.HasIndex("OccupationId");
 
-                    b.HasIndex("TalentBaseId");
-
                     b.ToTable("TalentBaseXOccupation");
-                });
-
-            modelBuilder.Entity("CrudNetAngular.Core.Models.Knowledge", b =>
-                {
-                    b.HasOne("CrudNetAngular.Core.Models.TalentBase", null)
-                        .WithMany("Knowledges")
-                        .HasForeignKey("TalentBaseId");
-                });
-
-            modelBuilder.Entity("CrudNetAngular.Core.Models.Occupation", b =>
-                {
-                    b.HasOne("CrudNetAngular.Core.Models.TalentBase", null)
-                        .WithMany("Occupations")
-                        .HasForeignKey("TalentBaseId");
                 });
 
             modelBuilder.Entity("CrudNetAngular.Core.Models.TalentBase", b =>
@@ -554,23 +518,31 @@ namespace CrudNetAngular.Data.Migrations
             modelBuilder.Entity("CrudNetAngular.Core.Models.TalentBaseXKnowledge", b =>
                 {
                     b.HasOne("CrudNetAngular.Core.Models.Knowledge", "Knowledge")
-                        .WithMany()
-                        .HasForeignKey("KnowledgeId");
+                        .WithMany("TalentBaseXKnowledge")
+                        .HasForeignKey("KnowledgeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CrudNetAngular.Core.Models.TalentBase", "TalentBase")
-                        .WithMany()
-                        .HasForeignKey("TalentBaseId");
+                        .WithMany("TalentBaseXKnowledge")
+                        .HasForeignKey("TalentBaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CrudNetAngular.Core.Models.TalentBaseXOccupation", b =>
                 {
                     b.HasOne("CrudNetAngular.Core.Models.Occupation", "Occupation")
-                        .WithMany()
-                        .HasForeignKey("OccupationId");
+                        .WithMany("TalentBaseXOccupation")
+                        .HasForeignKey("OccupationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CrudNetAngular.Core.Models.TalentBase", "TalentBase")
-                        .WithMany()
-                        .HasForeignKey("TalentBaseId");
+                        .WithMany("TalentBaseXOccupation")
+                        .HasForeignKey("TalentBaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

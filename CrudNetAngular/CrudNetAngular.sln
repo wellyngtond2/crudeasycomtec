@@ -13,15 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6E4A90F3-4916-47C1-81A3-422CE2E68BBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNetAngular", "CrudNetAngular\CrudNetAngular.csproj", "{E807E78F-366C-4A47-8C42-71F892997D0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudNetAngular", "CrudNetAngular\CrudNetAngular.csproj", "{E807E78F-366C-4A47-8C42-71F892997D0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNetAngular.Core", "CrudNetAngular.Core\CrudNetAngular.Core.csproj", "{CA71D0AE-C621-477B-8C15-87B17870B5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudNetAngular.Core", "CrudNetAngular.Core\CrudNetAngular.Core.csproj", "{CA71D0AE-C621-477B-8C15-87B17870B5BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNetAngular.Data", "CrudNetAngular.Data\CrudNetAngular.Data.csproj", "{8C71A281-43F4-4CD9-B69A-0881C2B2AB27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudNetAngular.Data", "CrudNetAngular.Data\CrudNetAngular.Data.csproj", "{8C71A281-43F4-4CD9-B69A-0881C2B2AB27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNetAngular.Infra", "CrudNetAngular.Infra\CrudNetAngular.Infra.csproj", "{CCE0E3AB-6CE5-4761-99C9-6126DC6FFEB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudNetAngular.Infra", "CrudNetAngular.Infra\CrudNetAngular.Infra.csproj", "{CCE0E3AB-6CE5-4761-99C9-6126DC6FFEB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNetAngular.Application", "CrudNetAngular.Application\CrudNetAngular.Application.csproj", "{3698B75B-6322-4A8C-8243-A2873BE22F8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudNetAngular.Application", "CrudNetAngular.Application\CrudNetAngular.Application.csproj", "{3698B75B-6322-4A8C-8243-A2873BE22F8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudNetAngular.IoC", "CrudNetAngular.IoC\CrudNetAngular.IoC.csproj", "{80FF212B-E84F-488C-B5E1-BC6DEF325A18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{3698B75B-6322-4A8C-8243-A2873BE22F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3698B75B-6322-4A8C-8243-A2873BE22F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3698B75B-6322-4A8C-8243-A2873BE22F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FF212B-E84F-488C-B5E1-BC6DEF325A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FF212B-E84F-488C-B5E1-BC6DEF325A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FF212B-E84F-488C-B5E1-BC6DEF325A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FF212B-E84F-488C-B5E1-BC6DEF325A18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{8C71A281-43F4-4CD9-B69A-0881C2B2AB27} = {04D44F16-41B4-4ED5-953A-E54A909A2031}
 		{CCE0E3AB-6CE5-4761-99C9-6126DC6FFEB4} = {E6431E66-0704-4334-82EB-990E697545A6}
 		{3698B75B-6322-4A8C-8243-A2873BE22F8C} = {1987E144-2066-4773-BBD5-5C56EE67B7FF}
+		{80FF212B-E84F-488C-B5E1-BC6DEF325A18} = {E6431E66-0704-4334-82EB-990E697545A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA3BFBA0-9858-4BAA-8D9D-A272AC3E5569}

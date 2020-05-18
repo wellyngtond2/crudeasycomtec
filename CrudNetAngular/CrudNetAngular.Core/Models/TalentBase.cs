@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CrudNetAngular.Core.Models
 {
@@ -24,12 +25,12 @@ namespace CrudNetAngular.Core.Models
         /// </summary>
         public Developer Developer { get; set; }
         /// <summary>
-        /// List of knowledge.
+        /// List of TalentBaseXKnowledge.
         /// </summary>
-        public ICollection<Knowledge> Knowledges { get; set; }
+        public ICollection<TalentBaseXKnowledge> TalentBaseXKnowledge { get; set; }
         /// <summary>
-        /// List of Occupation.
+        /// List of TalentBaseXOccupation.
         /// </summary>
-        public ICollection<Occupation> Occupations { get; set; }
+        public ICollection<TalentBaseXOccupation> TalentBaseXOccupation { get; set; }
     }
 }
