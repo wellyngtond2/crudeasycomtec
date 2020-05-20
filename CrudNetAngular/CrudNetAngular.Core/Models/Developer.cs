@@ -10,6 +10,10 @@
         /// </summary>
         public string Name { get; set; }
         /// <summary>
+        /// Email of developer
+        /// </summary>
+        public string Email { get; set; }
+        /// <summary>
         /// Skype of developer
         /// </summary>
         public string Skype { get; set; }
