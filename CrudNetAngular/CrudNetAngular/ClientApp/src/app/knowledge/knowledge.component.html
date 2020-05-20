@@ -1,0 +1,56 @@
+<div class="container-12">
+  <form>
+    <table class="example-full-width" cellspacing="12">
+      <thead>
+        <h4 class="mat-subheading-1">
+          Rate yourself from 0 to 5 for the knowledge specified below, and
+          that's okay if you do not know many things, the important thing is to
+          be honest!
+        </h4>
+      </thead>
+      <tbody class="mat-card" *ngFor="let knowledge of Knowledges">
+        <p class="mat-title">{{ knowledge.Description }}</p>
+        <tr>
+          <td>
+            <div class="container">
+              <label>I don't know</label>
+              <mat-radio-group aria-label="Select an option" aria-required="">
+                <mat-radio-button value="0"> 0</mat-radio-button>
+                <mat-radio-button value="1"> 1</mat-radio-button>
+                <mat-radio-button value="2"> 2</mat-radio-button>
+                <mat-radio-button value="3"> 3</mat-radio-button>
+                <mat-radio-button value="4"> 4</mat-radio-button>
+                <mat-radio-button value="5"> 5</mat-radio-button>
+              </mat-radio-group>
+              <label>Senior</label>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <br />
+        <table>
+          <tr>
+            <td>
+              <mat-form-field appearance="standard">
+                <label class="mat-subheading-1">
+                  Do you know any other language or framework that was not
+                  listed above? Tell us and evaluate yourself from 0 to 5.
+                </label>
+                <input matInput />
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field appearance="standard">
+                <mat-label>Link Crud</mat-label>
+                <input matInput />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </tfoot>
+    </table>
+  </form>
+</div>

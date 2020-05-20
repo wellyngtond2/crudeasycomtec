@@ -1,0 +1,28 @@
+<div class="container-12">
+  <form>
+    <table class="example-full-width" cellspacing="12">
+      <thead>
+        <h2 class="mat-title">What is your willingness to work today?</h2>
+      </thead>
+      <tbody>
+        <tr *ngFor="let occupation of Occupations">
+          <td>
+            <section>
+              <mat-checkbox>{{ occupation.Description }}</mat-checkbox>
+            </section>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field appearance="standard">
+              <label class="mat-subheading-1">
+                What is your hourly salary requirements?
+              </label>
+              <input matInput required type="number" />
+            </mat-form-field>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
