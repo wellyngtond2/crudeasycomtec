@@ -1,7 +1,6 @@
 ﻿using CrudNetAngular.Core.Models;
 using CrudNetAngular.Data.Initial_Seed;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Linq;
 using System.Threading;
@@ -22,7 +21,7 @@ namespace CrudNetAngular.Data.Context
         {
             modelBuilder.Entity<Knowledge>().HasData(KnowledgeSeed.GetKnowledgesSeed());
             modelBuilder.Entity<Occupation>().HasData(OccupationSeed.GetOccupationsSeed());
-            
+
             modelBuilder.Entity<TalentBaseXKnowledge>().Ignore("Id").HasKey(k => new { k.TalentBaseId, k.KnowledgeId });
             modelBuilder.Entity<TalentBaseXOccupation>().Ignore("Id").HasKey(k => new { k.TalentBaseId, k.OccupationId });
 
