@@ -1,4 +1,4 @@
-﻿namespace CrudNetAngular.Core.DataContracts.Response
+﻿namespace CrudNetAngular.DataContracts.Response
 {
     /// <summary>
     /// Base of the contract response

@@ -1,17 +1,18 @@
 ﻿using AutoMapper;
-using CrudNetAngular.Application.Interfaces;
-using CrudNetAngular.Core.DataContracts.Request;
-using CrudNetAngular.Core.DataContracts.Response;
 using CrudNetAngular.Core.Interfaces.Repositories.UoW;
 using CrudNetAngular.Core.Interfaces.Validates;
+using CrudNetAngular.DataContracts.Request;
+using CrudNetAngular.DataContracts.Response;
+using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CrudNetAngular.Core.Services
 {
-    public abstract class BaseOperationHandler<TRequest, TResponse> : IBaseOperationHandler<TRequest, TResponse>
-        where TRequest : BaseRequest
+    public abstract class BaseOperationHandler<TRequest, TResponse> : IRequestHandler<TRequest, TResponse>
+        where TRequest : BaseRequest<TResponse>
         where TResponse : BaseResponse, new()
     {
         protected IUnitOfWork _unitOfWork;
@@ -27,7 +28,7 @@ namespace CrudNetAngular.Core.Services
             _logger = logger;
         }
 
-        public async Task<TResponse> Handle(TRequest request)
+        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken)
         {
             var response = new TResponse();
             try
@@ -43,11 +44,11 @@ namespace CrudNetAngular.Core.Services
                     };
                 }
 
-                _unitOfWork.BeginTransaction();
+                await _unitOfWork.BeginTransactionAsync();
 
                 response = await ProcessAsync(request);
 
-                _unitOfWork.CommitTransaction();
+                await _unitOfWork.CommitTransactionAsync();
 
             }
             catch (Exception ex)

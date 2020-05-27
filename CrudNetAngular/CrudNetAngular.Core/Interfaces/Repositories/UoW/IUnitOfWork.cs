@@ -1,6 +1,7 @@
 ﻿using CrudNetAngular.Core.Models;
 using System;
 using System.Data;
+using System.Threading.Tasks;
 
 namespace CrudNetAngular.Core.Interfaces.Repositories.UoW
 {
@@ -22,12 +23,12 @@ namespace CrudNetAngular.Core.Interfaces.Repositories.UoW
         /// Initiates a transaction under the connection held an instance of UnitOfWork.
         /// </summary>
         /// <param name="isolationLevel">Transaction isolation level. Default: <see cref="IsolationLevel.ReadUncommitted"/>.</param>
-        void BeginTransaction();
+        Task BeginTransactionAsync();
 
         /// <summary>
         /// Commits the transaction.
         /// </summary>
-        void CommitTransaction();
+        Task CommitTransactionAsync();
 
         /// <summary>
         /// Rolls back the transaction.

@@ -8,6 +8,11 @@ namespace CrudNetAngular.Core.Models
     /// </summary>
     public sealed class TalentBase : BaseModel
     {
+        public TalentBase()
+        {
+            TalentBaseXKnowledge = new List<TalentBaseXKnowledge>();
+            TalentBaseXOccupation = new List<TalentBaseXOccupation>();
+        }
         /// <summary>
         /// Other knowledge unlisted.
         /// </summary>

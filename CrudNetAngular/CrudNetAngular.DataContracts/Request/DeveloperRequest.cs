@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CrudNetAngular.DataContracts.Response;
+using System.ComponentModel.DataAnnotations;
 
-namespace CrudNetAngular.Core.DataContracts.Request
+namespace CrudNetAngular.DataContracts.Request
 {
-    public sealed class DeveloperRequest : BaseRequest
+    public sealed class DeveloperRequest : BaseRequest<BaseResponse>
     {
         /// <summary>
         /// Name of developer

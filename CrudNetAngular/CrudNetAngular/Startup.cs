@@ -1,7 +1,12 @@
 using AutoMapper;
+using CrudNetAngular.Core.Interfaces.Repositories.UoW;
+using CrudNetAngular.Core.Interfaces.Validates;
 using CrudNetAngular.Core.Mapper;
+using CrudNetAngular.Core.Validates;
 using CrudNetAngular.Data.Context;
+using CrudNetAngular.Data.Repositories.UoW;
 using CrudNetAngular.IoC;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -9,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
+using Microsoft.Extensions.Logging;
 
 namespace CrudNetAngular
 {
@@ -33,7 +38,12 @@ namespace CrudNetAngular
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IBaseValidate<>), typeof(OperationValidator<>));
+            services.AddTransient(typeof(ILogger<>), (typeof(Logger<>)));
+            services.AddAutoMapper(typeof(CoreMapper).Assembly);
 
+            services.AddMediatR();
             InjectorBootStrapper.CreateServiceProvider(services);
         }
 

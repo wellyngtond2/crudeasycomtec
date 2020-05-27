@@ -1,4 +1,4 @@
-﻿namespace CrudNetAngular.Core.DataContracts.Response
+﻿namespace CrudNetAngular.DataContracts.Response
 {
     public sealed class DeveloperResponse : BaseResponse
     {

@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using CrudNetAngular.DataContracts.Response;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace CrudNetAngular.Core.DataContracts.Request.TalentBase
+namespace CrudNetAngular.DataContracts.Request.TalentBase
 {
-    public sealed class CreateTalentBaseRequest : BaseRequest
+    public sealed class UpdateTalentBaseRequest : BaseRequest<TalentBaseResponse>
     {
+        /// <summary>
+        /// Identify of TalentBase.
+        /// </summary>
+        public Guid Id { get; set; }
         /// <summary>
         /// Other knowledge unlisted.
         /// </summary>

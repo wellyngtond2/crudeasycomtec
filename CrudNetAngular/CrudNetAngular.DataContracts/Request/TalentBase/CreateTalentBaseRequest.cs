@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using CrudNetAngular.DataContracts.Response;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace CrudNetAngular.Core.DataContracts.Response
+namespace CrudNetAngular.DataContracts.Request.TalentBase
 {
-    public sealed class TalentBaseResponse : BaseResponse
+    public sealed class CreateTalentBaseRequest : BaseRequest<TalentBaseResponse>
     {
         /// <summary>
         /// Other knowledge unlisted.
@@ -15,18 +17,21 @@ namespace CrudNetAngular.Core.DataContracts.Response
         /// <summary>
         /// Price of worked hour.
         /// </summary>
+        [Required]
         public decimal HourPrice { get; set; }
         /// <summary>
         /// Candidate developer.
         /// </summary>
-        public DeveloperResponse Developer { get; set; }
+        [Required]
+        public DeveloperRequest Developer { get; set; }
         /// <summary>
         /// List of knowledge.
         /// </summary>
-        public ICollection<KnowledgeResponse> Knowledges { get; set; }
+        [Required]
+        public ICollection<KnowledgeRequest> Knowledges { get; set; }
         /// <summary>
         /// List of Occupation.
         /// </summary>
-        public ICollection<OccupationResponse> Occupations { get; set; }
+        public ICollection<OccupationRequest> Occupations { get; set; }
     }
 }

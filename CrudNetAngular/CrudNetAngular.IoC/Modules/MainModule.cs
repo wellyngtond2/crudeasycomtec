@@ -16,6 +16,10 @@ namespace CrudNetAngular.IoC.Modules
             var assemblies = new[]
             {
                 Assembly.Load("CrudNetAngular"),
+                Assembly.Load("CrudNetAngular.Core"),
+                Assembly.Load("CrudNetAngular.DataContracts"),
+                Assembly.Load("CrudNetAngular.Data"),
+                Assembly.Load("CrudNetAngular.Infra"),
             };
 
             builder

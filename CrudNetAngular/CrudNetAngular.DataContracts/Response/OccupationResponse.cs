@@ -1,13 +1,13 @@
-﻿namespace CrudNetAngular.Core.DataContracts.Response
+﻿namespace CrudNetAngular.DataContracts.Response
 {
-    public sealed class KnowledgeResponse : BaseResponse
+    public sealed class OccupationResponse : BaseResponse
     {
         /// <summary>
-        /// Identify of knowledge.
+        /// Identify of occupation.
         /// </summary>
         public string Id { get; set; }
         /// <summary>
-        /// Description of knowledge.
+        /// Description of occupation.
         /// </summary>
         public string Description { get; set; }
     }

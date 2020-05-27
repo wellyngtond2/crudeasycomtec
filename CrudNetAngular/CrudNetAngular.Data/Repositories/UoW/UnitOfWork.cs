@@ -1,6 +1,7 @@
 ﻿using CrudNetAngular.Core.Interfaces.Repositories;
 using CrudNetAngular.Core.Interfaces.Repositories.UoW;
 using CrudNetAngular.Data.Context;
+using System.Threading.Tasks;
 
 namespace CrudNetAngular.Data.Repositories.UoW
 {
@@ -24,14 +25,14 @@ namespace CrudNetAngular.Data.Repositories.UoW
         public ITalentBaseRepository TalentBaseRepository => _talentBaseRepository ?? (_talentBaseRepository = new TalentBaseRepository(_dataContext));
 
 
-        public void BeginTransaction()
+        public async Task BeginTransactionAsync()
         {
-            _dataContext.Database.BeginTransactionAsync();
+            await _dataContext.Database.BeginTransactionAsync();
         }
 
-        public void CommitTransaction()
+        public async Task CommitTransactionAsync()
         {
-            _dataContext.SaveChangesAsync();
+            await _dataContext.SaveChangesAsync();
             _dataContext.Database.CommitTransaction();
         }
 
